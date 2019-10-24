@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Ver Plasticos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-item *ngFor="let plasticos of plasticos"  >
+        <ion-label>
+            <ion-grid>
+          <p> <strong> Cantidad: </strong> {{plasticos.cantidad}} </p>
+          <p> <strong > Fecha de ingreso: </strong> {{plasticos.fecha}} </p>
+            </ion-grid>
+        </ion-label>
+    </ion-item>
+    <ion-button ion-button expand = "small" type="submit"  color="secondary" (click)="goEliminarPlastico()">Borrar Datos </ion-button>  
+    
+</ion-content>
