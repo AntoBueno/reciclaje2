@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color ="success">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
@@ -12,10 +12,17 @@
         <ion-label position="floating"> Cantidad (En volumen)</ion-label>
         <ion-input type="text" [(ngModel)]="datosplasticos.cantidad" > </ion-input>
       </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating"> Dia</ion-label>
+      <ion-input type="text" [(ngModel)]="datosplasticos.dia" > </ion-input>
+    </ion-item>
+
       <ion-item>
           <ion-label position="floating"> Fecha </ion-label>
           <ion-datetime [(ngModel)]="datosplasticos.fecha " display-format="YYYY,DD,MM" ></ion-datetime>
         </ion-item>
 
-        <ion-button (click)="goAgregarPlastico()">Enviar</ion-button>
+        <ion-button color="success" size="small" (click)="goAgregarPlastico()">Enviar</ion-button>
+        <ion-button color="danger" size="small" routerLink='/grafico'>Volver</ion-button>
 </ion-content>

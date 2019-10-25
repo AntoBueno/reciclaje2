@@ -24,7 +24,7 @@ export class ApirestService {
 
 
   doVerMetal(): Observable <deposito_metales[]> {
-    return this.http.get<deposito_metales[]>("")
+    return this.http.get<deposito_metales[]>("http://35.193.42.58:3000/deposito_metales")
   }
   doVerVidrio(): Observable <[]> {
     return this.http.get<[]>("")

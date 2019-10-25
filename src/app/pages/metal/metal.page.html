@@ -1,22 +1,37 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
     <ion-title>Metal</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content class="ion-padding">
-    <ion-item *ngFor="let metales of metales"  >
-        <ion-label>
-            <ion-grid>
-          <p> <strong> Cantidad (Kilos): </strong> {{metales.kilos}} </p>
-          <p> <strong > Dia: </strong> {{metales.dia}} </p>
-          <p> <strong > Fecha de ingreso: </strong> {{metales.fecha_ingreso}} </p>
-        </ion-grid>
-        </ion-label>
-    </ion-item>
-    <ion-button ion-button expand = "small" type="submit"  color="secondary" (click)="goEliminarPlastico()">Borrar Datos </ion-button>  
-    
-</ion-content>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Dia</th>
+          <br>
+          <th scope="col">Cantidad</th>
+          <br>
+          <th scope="col">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let metales of metales">
+              <td>{{metales.dia}}</td>
+              <br>
+              <br>
+              <td>{{metales.kilos}}</td>
+              <br>
+              <td>{{metales.fecha_ingreso}}</td>
+              <td style="display: flex">
+                  
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ion-button color="danger" size="small" routerLink='/grafico'>Volver</ion-button>
+      </ion-content>
+
+
