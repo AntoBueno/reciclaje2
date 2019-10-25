@@ -1,18 +1,22 @@
+
 <ion-header>
-  <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>Grafico</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-
-  <ion-menu-toggle>
-    <ion-button expand="full">Toggle Menu</ion-button>
-  </ion-menu-toggle>
-
-  <ion-button expand="full" (click)="openMenu()">Open Menu</ion-button>
-  <ion-button expand="full" routerLink="/menu/metal">Go to Metal</ion-button>
-</ion-content>
+    <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Grafico</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+    <ion-list-header color="light">Dia vs Volumen</ion-list-header>
+    <ion-button padding color="success" (click)="fetchData()" expand="full">Cargar</ion-button>
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-subtitle>Volumen por dia</ion-card-subtitle>
+        <ion-card-title>Plastico Reciclado</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #hrzBarChart6></canvas>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

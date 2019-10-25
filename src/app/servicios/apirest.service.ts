@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
+
 import { datosplasticos, deposito_metales } from '../datosapi/datosapi.models';
 
 @Injectable({
@@ -29,4 +30,6 @@ export class ApirestService {
   doVerVidrio(): Observable <[]> {
     return this.http.get<[]>("")
   }
+
+  
 }
