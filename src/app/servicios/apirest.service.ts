@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
-
+import {delay} from 'rxjs/operators';
 import { datosplasticos, deposito_metales } from '../datosapi/datosapi.models';
 
 @Injectable({
@@ -14,13 +14,15 @@ export class ApirestService {
   ) { }
 
   doAgregarPlastico(datosplasticos: datosplasticos): Observable<any>{
-    return this.http.post<any>("http://localhost:3000/datosplasticos",datosplasticos)
+    return this.http.post<any>("http://104.198.56.154:3000/datosplasticos",datosplasticos)
   } 
   doVerPlastico(): Observable <datosplasticos[]> {
-    return this.http.get<datosplasticos[]>("http://localhost:3000/datosplasticos")
+    return this.http.get<datosplasticos[]>("http://104.198.56.154:3000/datosplasticos").pipe(
+      delay( 2500 )
+    );
   }
   doEliminarPlasticos(datosplasticos:number):Observable<any>{
-    return this.http.delete<datosplasticos[]>("http://localhost:3000/datosplasticos/" + datosplasticos)
+    return this.http.delete<datosplasticos[]>("http://104.198.56.154:3000/datosplasticos/" + datosplasticos)
   }
 
 
