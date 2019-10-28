@@ -5,26 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VerplasticoPage } from './verplastico.page';
-import { PipesModule } from 'src/app/pipes/pipes.module';
-
+import { GraficometalPage } from './graficometal.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: VerplasticoPage
+    component: GraficometalPage
   }
 ];
 
 @NgModule({
   imports: [
-    PipesModule,
     CommonModule,
     FormsModule,
     IonicModule,
-    
     RouterModule.forChild(routes)
   ],
-  declarations: [VerplasticoPage]
+  declarations: [GraficometalPage]
 })
-export class VerplasticoPageModule {}
+export class GraficometalPageModule {}

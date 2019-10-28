@@ -1,22 +1,26 @@
-import { DatetimeOptions } from '@ionic/core'
+
 
 export interface datosplasticos{
+    id: number
     cantidad: number
     dia: string
     fecha: Date
 }
 
 export class datosplasticos{
+    id:number
     cantidad: number
     dia: string
     fecha: Date
     constructor(datos?: datosplasticos){
         if(datos != null ){
+            this.id=datos.id
             this.cantidad=datos.cantidad
             this.dia=datos.dia
             this.fecha=datos.fecha
             return
         }
+            this.id=this.id
             this.cantidad=this.cantidad
             this.dia=this.dia
             this.fecha=this.fecha

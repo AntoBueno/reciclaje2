@@ -1,32 +1,25 @@
 <ion-header>
-  <ion-toolbar color="secondary">
+  <ion-toolbar color="primary">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
     <ion-title>Ver Plasticos</ion-title>
   </ion-toolbar>
+  
+  
 </ion-header>
 
-<ion-content class="ion-padding">
-  <table>
-    <thead>
-      <tr>
-        <th scope="col">Dia</th>
-        <th scope="col">Cantidad</th>
-        <th scope="col">Fecha</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let plasticos of plasticos">
-        <td>{{plasticos.dia}}</td>
-        
-        <td>{{plasticos.cantidad}}</td>
-        <td>{{plasticos.fecha}}</td>
-        <td style="display: flex">
-          <ion-button color="secondary" size="small" (click)="goEliminarplastico(plasticos.id)">Borrar</ion-button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <ion-button color="primary" size="small" routerLink='/grafico'>Volver</ion-button>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let datosplasticos of datosplasticos">
+      <ion-label>
+          <h4><strong>{{datosplasticos.dia}}</strong></h4>
+          <h4>{{datosplasticos.cantidad}}</h4>
+          <h3>{{datosplasticos.fecha}}</h3>
+      </ion-label>
+      <ion-button color="medium  " size="small" (click)="goEliminarplastico(datosplasticos.id)">Borrar</ion-button>
+      
+    </ion-item>
+</ion-list>
+<ion-button color="primary" size="small" routerLink='/grafico'>Volver</ion-button>
 </ion-content>

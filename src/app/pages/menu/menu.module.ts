@@ -16,7 +16,9 @@ const routes: Routes = [
         { path: 'plastico', loadChildren: '../plastico/plastico.module#PlasticoPageModule' },
         { path: 'metal', loadChildren: '../metal/metal.module#MetalPageModule' },
         { path: 'vidrio', loadChildren: '../vidrio/vidrio.module#VidrioPageModule' },
+        { path: 'graficometal', loadChildren: '../graficometal/graficometal.module#GraficometalPageModule' },
         { path: 'verplastico', loadChildren: '../verplastico/verplastico.module#VerplasticoPageModule' }
+       
     ]
   },
   {

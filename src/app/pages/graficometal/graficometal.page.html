@@ -1,0 +1,34 @@
+
+<ion-header>
+    <ion-toolbar color="medium">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Grafico Metal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+    <ion-list-header color="light">Dia vs Kilo</ion-list-header>
+    <ion-button padding color="success" (click)="fetchDataMetal()" expand="full">Cargar</ion-button>
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-subtitle>Kilos por dia</ion-card-subtitle>
+        <ion-card-title>Metal Reciclado</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #pieChart></canvas>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="welcome-card">
+        <ion-list-header color="light">Dia vs Precio</ion-list-header>
+      <ion-card-header>
+        <ion-card-subtitle>Ganancia por dia</ion-card-subtitle>
+        <ion-card-title>Metal Reciclado</ion-card-title>
+        <ion-card-subtitle>Precio x metal kg de metal ($30)</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <canvas #pieChartValor></canvas>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

@@ -25,7 +25,9 @@ export class ApirestService {
     return this.http.delete<datosplasticos[]>("http://104.198.56.154:3000/datosplasticos/" + datosplasticos)
   }
 
-
+  doEditarPlastico(datosplasticos:datosplasticos, id:string):Observable<any>{
+    return this.http.patch<any>("http://104.198.56.154:3000/datosplasticos/"+id,datosplasticos)
+  }
   doVerMetal(): Observable <deposito_metales[]> {
     return this.http.get<deposito_metales[]>("http://35.193.42.58:3000/deposito_metales")
   }

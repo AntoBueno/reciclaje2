@@ -10,8 +10,12 @@ export class MenuPage implements OnInit {
   
   pages = [
     {
-      title: 'Graficos',
+      title: 'Grafico Plastico',
       url: '/menu/grafico'
+    },
+    {
+      title: 'Grafico Metal',
+      url: '/menu/graficometal'
     },
     {
       title: 'Agregar Plastico',
@@ -29,6 +33,7 @@ export class MenuPage implements OnInit {
       title: 'Ver Vidrio',
       url: '/menu/vidrio'
     }
+    
   ];
 
   selectedPath = '';

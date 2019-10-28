@@ -6,31 +6,17 @@
     <ion-title>Metal</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Dia</th>
-          <br>
-          <th scope="col">Cantidad</th>
-          <br>
-          <th scope="col">Fecha</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr *ngFor="let metales of metales">
-              <td>{{metales.dia}}</td>
-              <br>
-              <br>
-              <td>{{metales.kilos}}</td>
-              <br>
-              <td>{{metales.fecha_ingreso}}</td>
-              <td style="display: flex">
-                  
-              </td>
-            </tr>
-          </tbody>
-        </table>
+
+<ion-content>
+    <ion-list>
+      <ion-item *ngFor="let metales of metales">
+        <ion-label>
+            <h4><strong>{{metales.dia}}</strong></h4>
+            <h4><strong>Kilos :</strong>{{metales.kilos}}</h4>
+            <h3><strong>Fecha de ingreso :</strong>{{metales.fecha_ingreso}}</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
         <ion-button color="danger" size="small" routerLink='/grafico'>Volver</ion-button>
       </ion-content>
 

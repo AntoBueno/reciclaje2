@@ -1,22 +1,32 @@
-
 <ion-header>
-    <ion-toolbar color="warning">
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>Grafico</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Grafico Plastico</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
-    <ion-list-header color="light">Dia vs Volumen</ion-list-header>
-    <ion-button padding color="success" (click)="fetchData()" expand="full">Cargar</ion-button>
-    <ion-card class="welcome-card">
-      <ion-card-header>
-        <ion-card-subtitle>Volumen por dia</ion-card-subtitle>
-        <ion-card-title>Plastico Reciclado</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <canvas #hrzBarChart6></canvas>
-      </ion-card-content>
-    </ion-card>
-  </ion-content>
+  <ion-list-header color="light">Dia vs Volumen</ion-list-header>
+  <ion-button padding color="warning" (click)="fetchDataPlastico()" expand="full">Cargar</ion-button>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Volumen por dia</ion-card-subtitle>
+      <ion-card-title>Plastico Reciclado</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #hrzBarChart6></canvas>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card">
+    <ion-list-header color="light">Dia vs Precio</ion-list-header>
+    <ion-card-header>
+      <ion-card-subtitle>Volumen por Precio</ion-card-subtitle>
+      <ion-card-title>Plastico Reciclado</ion-card-title>
+      <ion-card-subtitle>Precio x plastico vol de plastico ($40)</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #hrzBarChartValor></canvas>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
